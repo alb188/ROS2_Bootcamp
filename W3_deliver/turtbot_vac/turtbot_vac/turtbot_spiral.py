@@ -7,7 +7,7 @@ from nav_msgs.msg import Odometry
 class TurtleSpiral(Node):
     def __init__(self):
         super().__init__('cmd_vel_publisher')
-        self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.publisher = self.create_publisher(Twist, '/cmd_vel', 10)
         self.subscription = self.create_subscription(
             Odometry,
             '/odom',
@@ -31,7 +31,7 @@ class TurtleSpiral(Node):
         msgt.angular.z = v_theta
 
         # Publish the message
-        self.publisher_.publish(msgt)
+        self.publisher.publish(msgt)
         self.get_logger().info(f'Publishing: linear.x={msgt.linear.x}, angular.z={msgt.angular.z}')
 
         # Update the angle
