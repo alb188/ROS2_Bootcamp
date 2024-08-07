@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'clean = turtbhw_vac.turthw_vac:main',
+            'clean = turthw_vac.turthw_vac:main',
         ],
     },
 )
