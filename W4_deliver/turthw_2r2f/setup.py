@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'r2f2 = turthw_2r2f.turthw_2r2f:main'
+            '2r2f = turthw_2r2f.turthw_2r2f:main'
         ],
     },
 )
