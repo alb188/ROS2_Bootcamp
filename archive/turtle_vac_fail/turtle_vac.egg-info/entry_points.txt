@@ -1,0 +1,3 @@
+[console_scripts]
+clean = turtle_vac.turtlesim_vac_spiral:mainbound = turtle_vac.turtlesim_vac_bound:main
+
