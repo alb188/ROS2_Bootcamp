@@ -25,8 +25,8 @@ class TurtleSpiral(Node):
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
         
         # Spiral parameters
-        self.a = 0.1  # Initial radius
-        self.b = 0.1  # Rate of expansion
+        self.a = 0.20  # Initial radius
+        self.b = 0.05  # Rate of expansion
         self.theta = 0.0  # Initial angle
         self.linear_velocity = 0.15  # Constant linear velocity
         
