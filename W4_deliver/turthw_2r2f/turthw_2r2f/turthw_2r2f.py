@@ -47,7 +47,7 @@ class TurtlePreGoal(Node):
 		twist.angular.z = 0.0
 		diff_of_xpositions = abs(self.initial_position.x - current_position.x)
 		diff_of_ypositions = abs(self.initial_position.y - current_position.y)
-		distance = math.sqrt((diff_of_xpositions**2) + (diff_of_ypositions))
+		distance = math.sqrt((diff_of_xpositions**2) + (diff_of_ypositions**2))
 		diff_of_yaw = yaw - self.initial_yaw 
 
 		self.correction(diff_of_yaw, twist)
