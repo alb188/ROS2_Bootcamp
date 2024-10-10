@@ -25,21 +25,21 @@ class TurtlePreGoal(Node):
 		self.i = 0
 
 
-	def correction(self, diff_of_yaw, twist):
-		if diff_of_yaw > 0.05 and diff_of_yaw < 0.25:
-			twist.angular.z = -0.125
-		elif diff_of_yaw < -0.05 and diff_of_yaw > -0.25:
-			twist.angular.z = 0.125
-		elif diff_of_yaw > 0.25 and diff_of_yaw < 0.5:
-			twist.angular.z = -0.15
-		elif diff_of_yaw < -0.25 and diff_of_yaw > -0.5:
-			twist.angular.z = 0.15
-		elif diff_of_yaw > 0.5:
-			twist.angular.z = -0.3
-		elif diff_of_yaw < -0.5:
-			twist.angular.z = 0.3
-		elif abs(diff_of_yaw) < 0.05:
-			twist.angular.z = 0.0
+	# def correction(self, diff_of_yaw, twist):
+	# 	if diff_of_yaw > 0.05 and diff_of_yaw < 0.25:
+	# 		twist.angular.z = -0.125
+	# 	elif diff_of_yaw < -0.05 and diff_of_yaw > -0.25:
+	# 		twist.angular.z = 0.125
+	# 	elif diff_of_yaw > 0.25 and diff_of_yaw < 0.5:
+	# 		twist.angular.z = -0.15
+	# 	elif diff_of_yaw < -0.25 and diff_of_yaw > -0.5:
+	# 		twist.angular.z = 0.15
+	# 	elif diff_of_yaw > 0.5:
+	# 		twist.angular.z = -0.3
+	# 	elif diff_of_yaw < -0.5:
+	# 		twist.angular.z = 0.3
+	# 	elif abs(diff_of_yaw) < 0.05:
+	# 		twist.angular.z = 0.0
 
 	def line_movement(self, current_position, yaw):
 		twist = Twist()
@@ -50,7 +50,7 @@ class TurtlePreGoal(Node):
 		distance = math.sqrt((diff_of_xpositions**2) + (diff_of_ypositions**2))
 		diff_of_yaw = yaw - self.initial_yaw 
 
-		self.correction(diff_of_yaw, twist)
+		# self.correction(diff_of_yaw, twist)
 
 		if distance > 1.0:
 			twist.linear.x = 0.0

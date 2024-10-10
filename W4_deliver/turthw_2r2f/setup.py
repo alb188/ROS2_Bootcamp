@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             '2r2f = turthw_2r2f.turthw_2r2f:main'
+            'p2r2f = turthw_2r2f.proto_turthw_2r2f:main'
         ],
     },
 )
